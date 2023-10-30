@@ -25,6 +25,7 @@ app.use(
     credentials: true, //允许跨域携带cookie
   })
 );
+app.proxy = true;
 
 //配置session
 app.keys = ["sdkk^&)76879sSA"]; //秘钥，用于加密
