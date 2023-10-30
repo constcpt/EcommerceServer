@@ -36,6 +36,7 @@ app.use(
       httpOnly: true, //只能通过后端修改cookie，不允许前端js改
       maxAge: 24 * 60 * 60 * 10000, //24h Cookie过期时间
       sameSite: "None",
+      secure: true,
     },
   })
 );
