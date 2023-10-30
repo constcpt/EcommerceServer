@@ -17,6 +17,14 @@ const orderRouter = require("./routes/order"); // 路由定义完了，别忘了
 // error handler
 onerror(app);
 
+//cors配置
+app.use(
+  cors({
+    origin: "https://ecommercefrontend-1af12.web.app", //前端origin
+    credentials: true, //允许跨域携带cookie
+  })
+);
+
 //配置session
 app.keys = ["sdkk^&)76879sSA"]; //秘钥，用于加密
 app.use(
@@ -25,15 +33,10 @@ app.use(
     cookie: {
       path: "/",
       httpOnly: true, //只能通过后端修改cookie，不允许前端js改
+      secure: true,
+      domain: "ecommercebackend-v3p3.onrender.com",
       maxAge: 24 * 60 * 60 * 10000, //24h Cookie过期时间
     },
-  })
-);
-//cors配置
-app.use(
-  cors({
-    origin: "https://ecommercefrontend-1af12.web.app", //前端origin
-    credentials: true, //允许跨域携带cookie
   })
 );
 
