@@ -32,7 +32,7 @@ app.use(
 //cors配置
 app.use(
   cors({
-    origin: "http://localhost:8080", //前端origin
+    origin: "https://ecommercefrontend-1af12.web.app", //前端origin
     credentials: true, //允许跨域携带cookie
   })
 );
