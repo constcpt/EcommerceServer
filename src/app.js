@@ -21,7 +21,7 @@ onerror(app);
 app.use(
   cors({
     // origin: "http://localhost:8080", //前端origin
-    origin: "https://ecommercefrontend-1af12.web.app", //前端origin
+    origin: "https://ecommercefront-6fa3b.web.app", //前端origin
     credentials: true, //允许跨域携带cookie
   })
 );
