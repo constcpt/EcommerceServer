@@ -21,7 +21,7 @@ onerror(app);
 app.use(
   cors({
     // origin: "http://localhost:8080", //前端origin
-    origin: "https://rpecommerce-7f77c.web.app/", //前端origin
+    origin: "https://rpecommerce-7f77c.web.app", //前端origin
     credentials: true, //允许跨域携带cookie
   })
 );
